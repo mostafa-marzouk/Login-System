@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+  </head>
+  <body>
+    <main class="vh-100 overflow-hidden">
+      <div class="container loginSystem text-white w-50 py-5 mt-5">
+        <div class="login text-center">
+          <h1 class="text-color">Smart Login System</h1>
+          <p class="green d-none">Success</p>
+          <input
+            oninput="validNameImput()"
+            id="nameSingUP"
+            type="text"
+            class="is-valid w-100 bg-Main rounded-2 p-2"
+            placeholder="Enter Your name"
+          />
+          <p class="m-0 text-danger d-block">must input valid name</p>
+          <div class="my-4">
+            <input
+              id="emailSingUP"
+              oninput="validEmailImput()"
+              type="email"
+              class="w-100 bg-Main rounded-2 p-2"
+              placeholder="Enter Your Email"
+            />
+            <p class="m-0 text-danger d-block">must input valid Email</p>
+          </div>
+
+          <input
+            oninput="validPassImput()"
+            id="passSingUP"
+            type="password"
+            class="w-100 bg-Main rounded-2 p-2 mb-3"
+            placeholder="Enter Your password"
+          />
+          <p class="m-0 text-danger d-block">must input valid password</p>
+
+          <button id="btnSingUP" class="w-100 p-2 mb-3">Sign Up</button>
+          <p>You have an account? <a href="login.html">Login</a></p>
+        </div>
+      </div>
+    </main>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
