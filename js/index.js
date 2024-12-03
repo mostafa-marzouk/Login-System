@@ -1,35 +1,49 @@
-/*==== elements inputs ====*/
+/*==== elements inputs signup ====*/
+const red = document.querySelector(".red");
 const success = document.querySelector(".green");
 const nameInputSignUp = document.getElementById("nameSingUP");
 const emailInputSignUp = document.getElementById("emailSingUP");
 const passInputSignUp = document.getElementById("passSingUP");
 const btnSignUp = document.getElementById("btnSingUP");
+
+
+//===========================================JS SignUP=========================================
 // list of emails
 let arrInfo;
 
+// check storge
 if (localStorage.getItem("emailsystem") == null) {
   arrInfo = [];
 } else {
   arrInfo = JSON.parse(localStorage.getItem("emailsystem"));
 }
+
 clearClass();
+
 btnSignUp.addEventListener("click", function () {
   if (
     passInputSignUp.nextElementSibling.classList.contains("d-block") ||
     nameInputSignUp.nextElementSibling.classList.contains("d-block") ||
-    emailInputSignUp.nextElementSibling.classList.contains("d-block")
+    emailInputSignUp.nextElementSibling.classList.contains("d-block") ||
+    nameInputSignUp.value == "" ||
+    emailInputSignUp.value == "" ||
+    passInputSignUp.value == null ||
+    isHere()
   ) {
-    alert("not valid");
+    red.classList.replace("d-none", "d-block");
     console.log("login not valid");
   } else {
+    isHere();
     getInfo();
     clear();
     success.classList.replace("d-none", "d-block");
+    red.classList.replace("d-block", "d-none");
     console.log("login valid");
+    console.log(arrInfo);
   }
-
-  console.log(arrInfo);
 });
+
+// get info from user
 
 function getInfo() {
   let signInfo = {
@@ -87,3 +101,22 @@ function clearClass() {
   nameInputSignUp.nextElementSibling.classList.add("d-none");
   success.classList.add("d-none");
 }
+function isHere() {
+  let ishere;
+  for (let i = 0; i < arrInfo.length; i++) {
+    if (emailInputSignUp.value == arrInfo[i].email) {
+      console.log("is here");
+      ishere = true;
+    } else {
+      console.log("not here");
+      ishere = false;
+    }
+  }
+  console.log(ishere);
+  return ishere;
+}
+//===========================================JS Login=========================================
+
+
+
+
