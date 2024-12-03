@@ -115,7 +115,6 @@ function isHere() {
   console.log(ishere);
   return ishere;
 }
-//===========================================JS Login=========================================
 
 
 
