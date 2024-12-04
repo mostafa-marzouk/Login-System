@@ -27,6 +27,7 @@ function check() {
       console.log("login done");
       localStorage.setItem("isLoggedIn", "true");
       window.location.href = "/home.html";
+      localStorage.setItem("name",arrInfo[i].name );
     } else {
       redMessage.classList.replace("d-none", "d-block");
       console.log("rong an pass or email");
