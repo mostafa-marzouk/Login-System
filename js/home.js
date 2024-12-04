@@ -14,6 +14,6 @@ function logout() {
   localStorage.removeItem("name");
   window.location.href = "index.html";
 }
-let bb =localStorage.getItem("name")
-let displayName = `<h1 class="text-center text-color">Welcome ${bb}</h1>`
-document.getElementById("inner").innerHTML = displayName
+let bb = localStorage.getItem("name");
+let displayName = `<h1 class="text-center text-color">Welcome ${bb}</h1>`;
+document.getElementById("inner").innerHTML = displayName;
