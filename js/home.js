@@ -6,7 +6,7 @@ btnlogout.addEventListener("click", function () {
 });
 window.onload = function () {
   if (localStorage.getItem("isLoggedIn") !== "true") {
-    window.location.href = "index.html"; // Redirect to login page
+    window.location.href = "/index.html"; // Redirect to login page
   }
 };
 function logout() {
