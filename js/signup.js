@@ -6,7 +6,6 @@ const emailInputSignUp = document.getElementById("emailSingUP");
 const passInputSignUp = document.getElementById("passSingUP");
 const btnSignUp = document.getElementById("btnSingUP");
 
-
 //===========================================JS SignUP=========================================
 // list of emails
 let arrInfo;
@@ -114,7 +113,3 @@ function isHere() {
   console.log(ishere);
   return ishere;
 }
-
-
-
-
