@@ -37,7 +37,7 @@ btnSignUp.addEventListener("click", function () {
     clear();
     success.classList.replace("d-none", "d-block");
     red.classList.replace("d-block", "d-none");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   }
 });
 
