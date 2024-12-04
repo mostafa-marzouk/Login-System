@@ -6,11 +6,12 @@ const redMessage = document.getElementById("red")
 //===========================================JS Login=========================================
 
 let arrInfo = JSON.parse(localStorage.getItem("emailsystem")) 
-let list = []
 
-btnLogin.addEventListener("click", function () {
+
+btnLogin.addEventListener("click", function (e) {
     getInfo()
     check()
+      
 })
 
 
@@ -24,6 +25,8 @@ function check() {
     for (let i = 0; i < arrInfo.length; i++){
         if (emailInputLogin.value == arrInfo[i].email && passInputLogin.value == arrInfo[i].pass) {
             console.log("login done");
+            localStorage.setItem("isLoggedIn", "true");
+            window.location.href = "/home.html";
             
         } else {
             redMessage.classList.replace("d-none","d-block")
