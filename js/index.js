@@ -26,7 +26,7 @@ function check() {
     ) {
       console.log("login done");
       localStorage.setItem("isLoggedIn", "true");
-      window.location.href = "/html/home.html";
+      window.location.href = "html/home.html";
       localStorage.setItem("name", arrInfo[i].name);
     } else {
       redMessage.classList.replace("d-none", "d-block");
