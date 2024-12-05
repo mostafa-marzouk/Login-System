@@ -12,7 +12,7 @@ window.onload = function () {
 function logout() {
   localStorage.removeItem("isLoggedIn");
   localStorage.removeItem("name");
-  window.location.href = "/index.html";
+  window.location.href = "../index.html";
 }
 let bb = localStorage.getItem("name");
 let displayName = `<h1 class="text-center text-color">Welcome ${bb}</h1>`;
